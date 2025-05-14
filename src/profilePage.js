@@ -96,7 +96,7 @@ const styles = {
     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
   },
   heading: {
-    color: 'rgb(97, 218, 251)',
+    color: '#0862F7',
     marginBottom: '20px',
     textAlign: 'center',
   },

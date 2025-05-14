@@ -13,10 +13,90 @@ import secureChat from './assets/logos/Secure chats with one-time links.svg';
 import itTeam from './assets/logos/Ideal for IT teams of all sizes.svg';
 import trustedImg from './assets/logos/Developed with standard, security-proven technologies.svg';
 
+const countries = [
+  { name: 'United States', code: 'EN', flag: '🇺🇸' },
+  { name: 'India', code: 'IN', flag: '🇮🇳' },
+  { name: 'United Kingdom', code: 'GB', flag: '🇬🇧' },
+  { name: 'Canada', code: 'CA', flag: '🇨🇦' },
+  { name: 'Australia', code: 'AU', flag: '🇦🇺' },
+  { name: 'Germany', code: 'DE', flag: '🇩🇪' },
+  { name: 'France', code: 'FR', flag: '🇫🇷' },
+  { name: 'Italy', code: 'IT', flag: '🇮🇹' },
+  { name: 'Spain', code: 'ES', flag: '🇪🇸' },
+  { name: 'Brazil', code: 'BR', flag: '🇧🇷' },
+  { name: 'Mexico', code: 'MX', flag: '🇲🇽' },
+  { name: 'South Korea', code: 'KR', flag: '🇰🇷' },
+  { name: 'Japan', code: 'JP', flag: '🇯🇵' },
+  { name: 'China', code: 'CN', flag: '🇨🇳' },
+  { name: 'Russia', code: 'RU', flag: '🇷🇺' },
+  { name: 'South Africa', code: 'ZA', flag: '🇿🇦' },
+  { name: 'Argentina', code: 'AR', flag: '🇦🇷' },
+  { name: 'Saudi Arabia', code: 'SA', flag: '🇸🇦' },
+  { name: 'United Arab Emirates', code: 'AE', flag: '🇦🇪' },
+  { name: 'Singapore', code: 'SG', flag: '🇸🇬' },
+  { name: 'Nigeria', code: 'NG', flag: '🇳🇬' },
+  { name: 'Pakistan', code: 'PK', flag: '🇵🇰' },
+  { name: 'Egypt', code: 'EG', flag: '🇪🇬' },
+  { name: 'Thailand', code: 'TH', flag: '🇹🇭' },
+  { name: 'Indonesia', code: 'ID', flag: '🇮🇩' },
+  { name: 'Turkey', code: 'TR', flag: '🇹🇷' },
+  { name: 'Vietnam', code: 'VN', flag: '🇻🇳' },
+  { name: 'Philippines', code: 'PH', flag: '🇵🇭' },
+  { name: 'Malaysia', code: 'MY', flag: '🇲🇾' },
+  { name: 'New Zealand', code: 'NZ', flag: '🇳🇿' },
+  { name: 'Netherlands', code: 'NL', flag: '🇳🇱' },
+  { name: 'Belgium', code: 'BE', flag: '🇧🇪' },
+  { name: 'Sweden', code: 'SE', flag: '🇸🇪' },
+  { name: 'Norway', code: 'NO', flag: '🇳🇴' },
+  { name: 'Denmark', code: 'DK', flag: '🇩🇰' },
+  { name: 'Finland', code: 'FI', flag: '🇫🇮' },
+  { name: 'Switzerland', code: 'CH', flag: '🇨🇭' },
+  { name: 'Poland', code: 'PL', flag: '🇵🇱' },
+  { name: 'Austria', code: 'AT', flag: '🇦🇹' },
+  { name: 'Greece', code: 'GR', flag: '🇬🇷' },
+  { name: 'Portugal', code: 'PT', flag: '🇵🇹' },
+  { name: 'Czech Republic', code: 'CZ', flag: '🇨🇿' },
+  { name: 'Ireland', code: 'IE', flag: '🇮🇪' },
+  { name: 'Romania', code: 'RO', flag: '🇷🇴' },
+  { name: 'Hungary', code: 'HU', flag: '🇭🇺' },
+  { name: 'Ukraine', code: 'UA', flag: '🇺🇦' },
+  { name: 'Israel', code: 'IL', flag: '🇮🇱' },
+  { name: 'Chile', code: 'CL', flag: '🇨🇱' },
+  { name: 'Colombia', code: 'CO', flag: '🇨🇴' },
+  { name: 'Peru', code: 'PE', flag: '🇵🇪' },
+  { name: 'Bangladesh', code: 'BD', flag: '🇧🇩' },
+  { name: 'Jordan', code: 'JO', flag: '🇯🇴' },
+  { name: 'Kuwait', code: 'KW', flag: '🇰🇼' },
+  { name: 'Qatar', code: 'QA', flag: '🇶🇦' },
+  { name: 'Bahrain', code: 'BH', flag: '🇧🇭' },
+  { name: 'Oman', code: 'OM', flag: '🇴🇲' },
+  { name: 'Lebanon', code: 'LB', flag: '🇱🇧' },
+  { name: 'Sri Lanka', code: 'LK', flag: '🇱🇰' },
+  { name: 'Nepal', code: 'NP', flag: '🇳🇵' },
+  { name: 'Mongolia', code: 'MN', flag: '🇲🇳' },
+  { name: 'Kazakhstan', code: 'KZ', flag: '🇰🇿' },
+  { name: 'Uzbekistan', code: 'UZ', flag: '🇺🇿' },
+  { name: 'Turkmenistan', code: 'TM', flag: '🇹🇲' },
+  { name: 'Kyrgyzstan', code: 'KG', flag: '🇰🇬' },
+  { name: 'Tajikistan', code: 'TJ', flag: '🇹🇯' },
+  { name: 'Armenia', code: 'AM', flag: '🇦🇲' },
+  { name: 'Georgia', code: 'GE', flag: '🇬🇪' },
+  { name: 'Azerbaijan', code: 'AZ', flag: '🇦🇿' },
+  { name: 'Belarus', code: 'BY', flag: '🇧🇾' },
+  { name: 'Bulgaria', code: 'BG', flag: '🇧🇬' },
+  { name: 'Serbia', code: 'RS', flag: '🇷🇸' },
+  { name: 'Montenegro', code: 'ME', flag: '🇲🇪' },
+  { name: 'North Macedonia', code: 'MK', flag: '🇲🇰' },
+  { name: 'Kosovo', code: 'XK', flag: '🇽🇰' }
+];
+
+
 function Home() {
   const [secret, setSecret] = useState('');
   const [link, setLink] = useState('');
+  const [fulllink, setFulllink] = useState('');
   const [loading, setLoading] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState('EN'); // Default country
 
   const frontendUrl = window.location.origin;
   const apiUrl = process.env.REACT_APP_API_URL;
@@ -36,13 +116,32 @@ function Home() {
           withCredentials: false, // make sure you're not using cookies
         }
       );
+      setFulllink(res.data.link);
       setLink(res.data.link);
+      
     } catch (err) {
       console.error('API error:', err.response || err.message);
       alert('Error creating secure link.');
     } finally {
       setLoading(false);
     }
+  };
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(fulllink).then(() => {
+      alert('Link copied to clipboard!');
+    });
+  };
+
+  const handleChangeCountry = (e) => {
+    const { name, value } = e.target;
+
+    // Handle different fields based on the name attribute
+    if (name === 'country') {
+      setSelectedCountry(value);
+      setFulllink(link+"&lg="+value);
+    } 
+    // Add more conditions here if you have other fields to handle
   };
 
 
@@ -74,9 +173,37 @@ function Home() {
             <img src={createIcon} alt="Create secure link" /> {loading ? 'Creating link...' : 'Create secure link'}
           </button>
           {link && (
-            <div style={{ marginTop: '2rem' }}>
-              <p>One-time link: <a href={link} style={{ color: '#145fff' }}>{link}</a></p>
-              <QRCodeCanvas value={link} size={150} />
+            <div >
+              <p >One-time link:</p>
+              <div style={{ display: 'flex', margin: '2rem 0' }}>
+                <input
+                  type="text"
+                  value={fulllink}
+                  readOnly
+                  
+                />
+                 <select
+        name="country"
+        value={selectedCountry}
+        onChange={handleChangeCountry}
+      >
+        {countries.map((country) => (
+          <option key={country.code} value={country.code}>
+            {country.flag} {country.name}
+          </option>
+        ))}
+      </select>
+                <button onClick={copyToClipboard} >
+                  Copy
+                </button>
+              </div>
+               <div style={{textAlign:'center'}}>
+              <QRCodeCanvas value={fulllink} size={250} />
+              </div>
+
+              <div >
+             
+              </div>
             </div>
           )}
         </div>

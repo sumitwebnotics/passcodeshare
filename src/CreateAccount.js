@@ -204,7 +204,7 @@ const styles = {
     boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
   },
   heading: {
-    color: 'rgb(97, 218, 251)',
+    color: '#0862F7',
     marginBottom: '20px',
     textAlign: 'center',
   },
@@ -212,7 +212,7 @@ const styles = {
     display: 'block',
     fontSize: '1rem',
     marginBottom: '8px',
-    color: 'rgb(97, 218, 251)',
+    color: '#0862F7',
   },
   input: {
     width: '100%',
@@ -241,7 +241,7 @@ const styles = {
   submitButton: {
     width: '100%',
     padding: '14px 20px',
-    backgroundColor: 'rgb(97, 218, 251)',
+    backgroundColor: '#0862F7',
     color: '#fff',
     border: 'none',
     borderRadius: '5px',

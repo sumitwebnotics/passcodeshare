@@ -107,14 +107,14 @@ const styles = {
     textAlign: 'center',
   },
   heading: {
-    color: 'rgb(97, 218, 251)',
+    color: '#0862F7',
     marginBottom: '20px',
   },
   label: {
     display: 'block',
     fontSize: '1rem',
     marginBottom: '8px',
-    color: 'rgb(97, 218, 251)',
+    color: '#0862F7',
   },
   input: {
     width: '100%',
@@ -130,7 +130,7 @@ const styles = {
   button: {
     width: '100%',
     padding: '14px 20px',
-    backgroundColor: 'rgb(97, 218, 251)',
+    backgroundColor: '#0862F7',
     color: '#fff',
     border: 'none',
     borderRadius: '5px',

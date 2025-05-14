@@ -11,8 +11,16 @@ function SecretView() {
   const [loading, setLoading] = useState(true);
   const apiUrl = process.env.REACT_APP_API_URL;
 
+  const extractIdFromLocation = () => {
+
+    const cleanedId = id.split('&')[0]; // Remove any query params (after &)
+    return cleanedId || id;
+  };
+
+  const idValue = extractIdFromLocation();  // Cleaned ID value
+
   useEffect(() => {
-    axios.get(`${apiUrl}/secret/${id}`)
+    axios.get(`${apiUrl}/secret/${idValue}`)
       .then(res => {
         setSecret(res.data);
         setLoading(false);
