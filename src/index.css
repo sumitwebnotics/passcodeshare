@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+body {
+  background-color: #fbfbfb;
+  margin: 0;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animation applied to secret text and error */
+h3,
+p {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Hover animation for buttons */
+button:hover {
+  background-color: #0f4abf;
+  transform: scale(1.05);
+}
+
+/* Header.css */
+.header {
+  background-color: #353240;
+  padding: 10px 0;
+
+}
+
+.header .container {
+  max-width: 1344px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  color: #fff;
+  margin: 0;
+}
+
+.header-logo-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-logo-img {
+  height: 24px;
+}
+
+.header nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header nav a {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  padding: 19.5px 12px 20.5px;
+}
+
+.header nav a.donate {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 10px 3px 10px;
+  gap: 3px;
+  background: #0862F7;
+  border-radius: 2px;
+}
+
+.top-section {
+  padding: 3rem 10px;
+}
+
+.top-section .container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.top-section h2 {
+  font-weight: 400;
+  font-size: 38.4px;
+  line-height: 43px;
+  text-align: center;
+  color: #363636;
+  margin: 0;
+}
+
+.top-section p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  color: #395693;
+  border-bottom: 2px solid #F5F5F5;
+  padding-bottom: 30px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.top-section textarea {
+  padding: 12px 12px;
+  width: 100%;
+  height: 72px;
+  background: #FFFFFF;
+  border: 1px solid #0862F7;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  font-family: "Inconsolata", monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.top-section textarea::placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+
+.top-section .create-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 17px 8px 8px;
+  gap: 4px;
+  background: #0862F7;
+  border-radius: 4px;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.secure-info {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.secure-info h3 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+  color: #0862F7;
+  margin: 0px 0 30px;
+}
+
+.secure-info .container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.secure-info h4 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+  color: #0862F7;
+  margin: 0 0 25px;
+}
+
+.secure-info p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #4A4A4A;
+}
+
+.secure-info .note-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #395693;
+  margin: 30px 0 0;
+}
+
+.features-section {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.features-section .container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.features-section h3 {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  align-items: center;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  color: #0862F7;
+  margin: 0 0 30px;
+}
+
+.features-section h4 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  color: #363636;
+  margin: 0 0 20px;
+}
+
+.features-section p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4A4A4A;
+}
+
+.advanced-section {
+  padding-bottom: 3rem;
+}
+
+.advanced-section .container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.advanced-section h3 {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  align-items: center;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  color: #0862F7;
+  margin: 0 0 30px;
+}
+
+.advanced-section p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4A4A4A;
+  margin: 0 0 20px;
+}
+
+.advanced-section ul {
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+.advanced-section ul li {
+  font-size: 16px;
+  line-height: 24px;
+  color: #4A4A4A;
+}
+
+.advanced-section ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.advanced-section strong {
+  font-weight: 600;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.Trusted-section {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  background-color: #F0F0F0;
+}
+
+.Trusted-section .container {
+  max-width: 863px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.Trusted-section h3 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 36px;
+  color: #363636;
+  margin: 0 0 20px;
+}
+
+.Trusted-section p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4A4A4A;
+}
+
+footer {
+  text-align: center;
+  padding: 50px 24px 96px;
+  background: #2A2A2F;
+  border-top: 2px solid #AAAAAA;
+}
+
+footer p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+  margin: 20px 0;
+}
+
+footer p span {
+  color: #CCCCCC;
+}
+
+footer .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+footer .links a {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #CCCCCC;
+  text-decoration: none;
+}
