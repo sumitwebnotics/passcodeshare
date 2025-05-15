@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef , useEffect} from 'react';
 import axios from 'axios';
 import { QRCodeCanvas } from 'qrcode.react';
 import Header from './Header';
@@ -12,6 +12,9 @@ import featureImg from './assets/logos/Features.svg';
 import secureChat from './assets/logos/Secure chats with one-time links.svg';
 import itTeam from './assets/logos/Ideal for IT teams of all sizes.svg';
 import trustedImg from './assets/logos/Developed with standard, security-proven technologies.svg';
+import { FiCopy } from 'react-icons/fi'; // Feather's copy icon
+
+
 
 const countries = [
   { name: 'United States', code: 'EN', flag: '🇺🇸' },
@@ -97,8 +100,13 @@ function Home() {
   const [fulllink, setFulllink] = useState('');
   const [loading, setLoading] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState('EN'); // Default country
+  const qrCodeRef = useRef(null);  // Reference to the QR Code canvas
+
+  const [qrCodeReady, setQrCodeReady] = useState(false);
 
   const frontendUrl = window.location.origin;
+
+
   const apiUrl = process.env.REACT_APP_API_URL;
 
 
@@ -144,6 +152,25 @@ function Home() {
     // Add more conditions here if you have other fields to handle
   };
 
+  const handlePrintQRCode = () => {
+
+      window.print();
+  
+    
+  };
+  
+
+  // Mark the QR code as ready when it's rendered
+  useEffect(() => {
+    if (qrCodeRef.current) {
+      setQrCodeReady(true);  // Set QR code as ready when the component is mounted
+    }
+  }, [fulllink]);
+  
+  
+
+  
+
 
   return (
     <div>
@@ -175,7 +202,7 @@ function Home() {
           {link && (
             <div >
               <p >One-time link:</p>
-              <div style={{ display: 'flex', margin: '2rem 0' }}>
+              <div className="wrp_container">
                 <input
                   type="text"
                   value={fulllink}
@@ -194,12 +221,32 @@ function Home() {
         ))}
       </select>
                 <button onClick={copyToClipboard} >
-                  Copy
+                <FiCopy style={{ marginRight: '8px' }} />
+                Copy 
                 </button>
               </div>
-               <div style={{textAlign:'center'}}>
-              <QRCodeCanvas value={fulllink} size={250} />
+              
+              
+              <div style={{ textAlign: 'center' }} id="qrCodeContainer">
+                {/* QR Code */}
+                <QRCodeCanvas
+                  ref={qrCodeRef}
+                  value={fulllink}
+                  size={250}
+                />
               </div>
+
+              <div>
+             
+                <button style={{padding: '13px 15px',
+    background: '#0862F7',
+    borderRadius: '5px',
+    color: '#fff',
+    border: 'none'}} onClick={handlePrintQRCode}>
+                  Print QR Code
+                </button>
+              </div>
+
 
               <div >
              

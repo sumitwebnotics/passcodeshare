@@ -368,3 +368,32 @@ footer .links a {
   color: #CCCCCC;
   text-decoration: none;
 }
+
+.wrp_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  width: 100%;
+  min-width: 100%;
+}
+
+.wrp_container * {
+  flex: 1 1 auto;
+}
+
+.wrp_container > :last-child {
+  max-width: 100px;
+  flex: 0 0 100px;
+}
+.wrp_container input, .wrp_container select,.wrp_container button {
+  padding: 10px 10px;
+  border-radius: 2px;
+  border-color: #999;
+  background: #faf8f845;
+}
+
+.wrp_container > :first-child {
+  min-width: 60%;
+}

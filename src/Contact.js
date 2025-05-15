@@ -19,7 +19,16 @@ function Contact() {
     <div style={{ fontFamily: 'Arial, sans-serif', color: '#333' }}>
       <Header />
       <div style={{ padding: '2rem', maxWidth: '600px', margin: '0 auto' }}>
-        <h2>Contact Us</h2>
+      <h2>Contact Us</h2>
+<p>We’re here to help. Whether you have a question about our service, need support, or want to provide feedback, don’t hesitate to reach out.</p>
+
+<h3>Support</h3>
+<p>If you're experiencing issues or have technical questions, please contact our support team at <a href="mailto:hello@mydevit.in">hello@mydevit.in</a>.</p>
+
+<h3>Follow Us</h3>
+<p>Stay updated with the latest news and updates:</p>
+
+<h3>Get in Touch</h3>
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <input
             type="text"
