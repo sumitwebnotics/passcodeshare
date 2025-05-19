@@ -6,26 +6,37 @@ function About() {
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', color: '#333' }}>
       <Header />
-      <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
-      <h2>About Us</h2>
-<p>We are committed to delivering secure, one-time link sharing for sensitive information. </p>
+      <div style={{ padding: '3rem', maxWidth: '900px', margin: '0 auto', fontFamily: 'Arial, sans-serif', color: '#333' }}>
+  <h1 style={{ color: '#145fff', marginBottom: '1rem' }}>About Us</h1>
 
-<h3>Our Mission</h3>
-<p>Our mission is to provide a simple, reliable, and secure way to share confidential data without the risk of unauthorized access. Whether it's passwords, API keys, or other sensitive details, we ensure they are shared safely—only once and only with the intended recipient.</p>
+  <section style={{ marginBottom: '2rem' }}>
+    <p>At Passcode Share, we are committed to delivering a secure and seamless solution for sharing sensitive information through one-time, self-destructing links.</p>
+  </section>
 
-<h3>How It Works</h3>
-<p>Secrets are encrypted in your browser before they ever touch our servers. The generated link can be used just once, and once opened, the data is deleted permanently. This zero-knowledge approach guarantees that no one—not even us—can access your information.</p>
+  <section style={{ marginBottom: '2rem' }}>
+    <h2 style={{ color: '#145fff' }}>Our Mission</h2>
+    <p>Our mission is to offer a simple, reliable, and highly secure way to share confidential data—such as passwords, API keys, or private messages—ensuring that it reaches only the intended recipient, one time only, with zero exposure.</p>
+  </section>
 
-<h3>Why Choose Us</h3>
-<ul>
-  <li><strong>Zero Access:</strong> End-to-end encryption means only the recipient can view the data.</li>
-  <li><strong>One-Time Viewing:</strong> Each link self-destructs after a single use for maximum security.</li>
-  
-</ul>
+  <section style={{ marginBottom: '2rem' }}>
+    <h2 style={{ color: '#145fff' }}>How It Works</h2>
+    <p>Secrets are encrypted directly in your browser using strong end-to-end encryption before they ever reach our servers. A unique link is generated that can be accessed only once. Once opened, the encrypted content is permanently deleted—guaranteeing a true zero-knowledge experience.</p>
+  </section>
 
-<h3>Our Commitment</h3>
-<p>Security and privacy are at the core of everything we do. We continuously improve our platform to meet the highest standards of data protection, ensuring your trust in every link shared.</p>
- </div>
+  <section style={{ marginBottom: '2rem' }}>
+    <h2 style={{ color: '#145fff' }}>Why Choose Us</h2>
+    <ul>
+      <li><strong>Zero Access:</strong> End-to-end encryption ensures only the intended recipient can view the content. Even we can’t access your data.</li>
+      <li><strong>One-Time Viewing:</strong> Every link is self-destructing after a single access, preventing data leaks or re-use.</li>
+    </ul>
+  </section>
+
+  <section style={{ marginBottom: '2rem' }}>
+    <h2 style={{ color: '#145fff' }}>Our Commitment</h2>
+    <p>Security and privacy are the foundation of everything we build. We continuously enhance our platform to meet the highest standards of data protection—so you can share with confidence and peace of mind.</p>
+  </section>
+</div>
+
       <Footer />
     </div>
   );
