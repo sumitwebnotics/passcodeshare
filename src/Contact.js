@@ -47,7 +47,7 @@ function Contact() {
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', color: '#333' }}>
       <Header />
-      <div style={{ padding: '2rem', maxWidth: '600px', margin: '0 auto', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', borderRadius: '8px' }}>
+      <div style={{ padding: '2rem', maxWidth: '600px', margin: '35px auto', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', borderRadius: '8px' }}>
         <h2 style={{ textAlign: 'center' }}>Contact Us</h2>
         <p style={{ textAlign: 'center' }}>
           We’re here to help. Whether you have a question about our service, need support, or want to provide feedback, don’t hesitate to reach out.

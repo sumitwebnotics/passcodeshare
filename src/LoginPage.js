@@ -115,6 +115,7 @@ const styles = {
     fontSize: '1rem',
     marginBottom: '8px',
     color: '#0862F7',
+    textAlign:'left'
   },
   input: {
     width: '100%',

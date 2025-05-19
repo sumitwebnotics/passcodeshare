@@ -273,8 +273,11 @@ function Home() {
               Trusted by leading brands including Monday.com, ThermaTru Doors, BioNTech, and FocusIT.</p>
             </div>
           </div>
-          <LogoCarousel />
-          <p className='note-text'>Trusted by top brands for secure one-time link solutions.</p>
+         
+        </div>
+        <div className='container-large'>
+        <LogoCarousel />
+        <p className='note-text'>Trusted by top brands for secure one-time link solutions.</p>
         </div>
       </section>
 
