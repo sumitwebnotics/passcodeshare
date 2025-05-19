@@ -26,7 +26,7 @@ code {
 @keyframes fadeIn {
   0% {
     opacity: 0;
-  }
+  } 
 
   100% {
     opacity: 1;
@@ -324,6 +324,12 @@ button:hover {
   padding: 0 10px;
 }
 
+.container-large {
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 .Trusted-section h3 {
   font-weight: 400;
   font-size: 32px;
@@ -500,7 +506,7 @@ footer .links a {
   border-radius: 12px;
   justify-content: center;
   align-items: center;
-  padding: 12px;
+  padding: 10px;
   display: flex;
 }
 
