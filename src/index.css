@@ -42,7 +42,6 @@ p {
 /* Hover animation for buttons */
 button:hover {
   background-color: #0f4abf;
-  transform: scale(1.05);
 }
 
 /* Header.css */
@@ -99,6 +98,14 @@ button:hover {
   gap: 3px;
   background: #0862F7;
   border-radius: 2px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
 }
 
 .top-section {
@@ -373,27 +380,123 @@ footer .links a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
   margin: 2rem 0;
   width: 100%;
   min-width: 100%;
 }
 
-.wrp_container * {
-  flex: 1 1 auto;
-}
 
-.wrp_container > :last-child {
-  max-width: 100px;
-  flex: 0 0 100px;
-}
-.wrp_container input, .wrp_container select,.wrp_container button {
+.wrp_container input,
+.wrp_container select,
+.wrp_container button {
   padding: 10px 10px;
   border-radius: 2px;
   border-color: #999;
   background: #faf8f845;
 }
 
-.wrp_container > :first-child {
+.wrp_container> :first-child {
   min-width: 60%;
+}
+
+.link_section {
+  padding-top: 30px;
+}
+
+.link_section .link-input {
+  flex: 1 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.link_section select {
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  padding: 0 10px;
+  font-size: 13px;
+  cursor: pointer;
+  width: 150px;
+  border-radius: 0px;
+}
+
+.link_section .copyBtn {
+  border-radius: 0 5px 5px 0;
+  background-color: #6a7282;
+  color: #ffffff;
+  border: none;
+  font-size: 17px;
+  padding: 10px 16px;
+}
+
+.link_section .copyBtn:hover {
+  transform: none;
+}
+
+.link_section .printBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 17px 8px 8px;
+  gap: 8px;
+  background: #0862F7;
+  border-radius: 4px;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 30px auto 0;
+}
+
+.link_section .printBtn:hover {
+  transform: none;
+}
+
+.link_section .printBtn svg {
+  width: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    color: #ffffff;
+    background-color: #ffffff;
+    padding: 7px 10px;
+  }
+
+  .menu-toggle img {
+    width: 20px;
+  }
+
+  .menu-toggle:hover {
+    background-color: #ffffff;
+  }
+
+  .header nav a {
+    padding: 10px;
+  }
+
+  .nav {
+    display: none !important;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    background: #353240;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    z-index: 999;
+  }
+
+  .nav.open {
+    display: flex !important;
+  }
+
 }
