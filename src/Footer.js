@@ -8,10 +8,9 @@ function Footer() {
       <p>Copyright &copy; {new Date().getFullYear()} <span>Passcodeshare</span></p>
       <div className='links'>
 
-        <Link to="/terms" >Terms of Service</Link>
-        <Link to="/privacy" >Privacy Policy</Link>
-        <Link to="/gdpr">GDPR Compliance</Link>
-        <Link to="/legal">Legal Notice</Link>
+        <Link to="/terms-of-service" >Terms of Service</Link>
+        <Link to="/privacy-policy" >Privacy Policy</Link>
+        <Link to="/legal-notice">Legal Notice</Link>
       </div>
     </footer>
   );

@@ -16,8 +16,8 @@ function Donate() {
         <ul style={{ listStyle: 'none', padding: 0, margin: '2rem 0' }}>
           <li>
             <strong>PayPal:</strong>{' '}
-            <a href="https://buy.stripe.com/9AQ3dG2mecdDclacPa" target="_blank" rel="noopener noreferrer">
-            https://buy.stripe.com/9AQ3dG2mecdDclacPa
+            <a href="https://donate.stripe.com/3cI5kE7sv6ex30s5LB5kk2x" target="_blank" rel="noopener noreferrer">
+            https://donate.stripe.com/3cI5kE7sv6ex30s5LB5kk2x
             </a>
           </li>
          

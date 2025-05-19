@@ -9,6 +9,9 @@ import Donate from './Donate';
 import CreateAccount from './CreateAccount';
 import LoginPage from './LoginPage';
 import ProfilePage from './profilePage';
+import Terms from './Terms';
+import Privacy from './Privacy';
+import Legal from './Legal';
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
         <Route path="/create-account" element={<CreateAccount />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/terms-of-service" element={<Terms />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="/legal-notice" element={<Legal />} />
       </Routes>
     </Router>
   );

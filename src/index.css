@@ -462,6 +462,54 @@ footer .links a {
   width: 20px;
 }
 
+.logo-carousel {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.logo-carousel .slick-slider .slick-track {
+  gap: 15px;
+  display: flex;
+}
+
+.logo-carousel .slick-slider .slick-list {
+  position: relative;
+}
+
+.logo-carousel .slick-slider .slick-list::before,
+.logo-carousel .slick-slider .slick-list::after {
+  position: absolute;
+  background: linear-gradient(90deg, #fbfbfb, transparent);
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+}
+
+.logo-carousel .slick-slider .slick-list::after {
+  left: auto;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.logo-carousel .slick-slider .slick-track .slick-slide {
+  background-color: #f9f6f3;
+  border: 1px solid #e3e0e9;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  display: flex;
+}
+
+.logo-carousel .slick-slider .slick-track .slick-slide img {
+  height: 40px;
+  display: inline-block;
+  max-width: 130px;
+}
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
