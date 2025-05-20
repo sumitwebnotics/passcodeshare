@@ -1,10 +1,15 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import { Helmet } from 'react-helmet';
 
 function Legal() {
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', color: '#333' }}>
+      <Helmet>
+      <title>Legal Notice | PasscodeShare – Secure Data Sharing</title>
+      <meta name="description" content="Access PasscodeShare’s Legal Notice to understand the legal information, disclaimers, and responsibilities associated with using our secure link sharing platform." />
+      </Helmet>
       <Header />
       <div style={{ padding: '3rem', maxWidth: '900px', margin: '0 auto', fontFamily: 'Arial, sans-serif', color: '#333' }}>
   <h1 style={{ color: '#145fff', marginBottom: '1rem' }}>Legal Notice</h1>

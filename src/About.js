@@ -1,10 +1,14 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import { Helmet } from 'react-helmet';
 
 function About() {
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', color: '#333' }}>
+       <Helmet>
+       <title>About PasscodeShare – Easy, Secure Code Sharing</title>
+       <meta name="description" content="Learn about PasscodeShare, a simple and secure way to share Wi-Fi passwords and access codes without revealing them directly." /></Helmet>
       <Header />
       <div style={{ padding: '3rem', maxWidth: '900px', margin: '0 auto', fontFamily: 'Arial, sans-serif', color: '#333' }}>
   <h1 style={{ color: '#145fff', marginBottom: '1rem' }}>About Us</h1>

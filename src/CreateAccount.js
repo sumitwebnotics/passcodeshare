@@ -4,6 +4,7 @@ import ReCAPTCHA from 'react-google-recaptcha'; // Importing reCAPTCHA
 import { useNavigate } from 'react-router-dom'; // For redirect after login
 import Header from './Header';
 import Footer from './Footer';
+import { Helmet } from 'react-helmet';
 
 // Remember to use your own reCAPTCHA site key from Google
 const RECAPTCHA_SITE_KEY = '6LfQqDYrAAAAAJ21W-fTkpLR77ehdwpdhl_bGsys';
@@ -79,12 +80,15 @@ function CreateAccount() {
 
   return (
     <>
+    <Helmet>
+    <title>Create an Account – PasscodeShare</title>
+<meta name="description" content="Join PasscodeShare today to securely send one-time links with sensitive information. Creating an account is fast and easy." />
+
+    </Helmet>
+   
       <Header />
       <div className="create-account-page" style={styles.container}>
         <h2 style={styles.heading}>Create Account</h2>
-
-       
-
         <form onSubmit={handleSubmit} style={styles.form}>
           {/* Email Field */}
           <label htmlFor="email" style={styles.label}>Email</label>

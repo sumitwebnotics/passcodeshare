@@ -3,10 +3,7 @@ import axios from 'axios';
 import { QRCodeCanvas } from 'qrcode.react';
 import Header from './Header';
 import Footer from './Footer';
-import mondayLogo from './assets/logos/monday.png';
-import thermatruLogo from './assets/logos/thermatru.png';
-import biontechLogo from './assets/logos/biontech.png';
-import focusitLogo from './assets/logos/focusit.png';
+
 import createIcon from './assets/logos/createIcon.svg';
 import featureImg from './assets/logos/Features.svg';
 import secureChat from './assets/logos/Secure chats with one-time links.svg';
@@ -14,6 +11,7 @@ import itTeam from './assets/logos/Ideal for IT teams of all sizes.svg';
 import trustedImg from './assets/logos/Developed with standard, security-proven technologies.svg';
 import { FiCopy } from 'react-icons/fi'; // Feather's copy icon
 import LogoCarousel from './LogoCarousel';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -175,6 +173,23 @@ function Home() {
 
   return (
     <div>
+       <Helmet>
+       <title>Secure password and confidential file sharing with PasscodeShare.</title>
+       <meta name="description" content="Safely send and receive confidential information using one-time links. Protect your data with customizable expiration settings and optional password security." />
+<meta name="keywords" content="secure link sharing, one-time link, password sharing, confidential file sharing, self-destructing link, private file transfer, encrypted message sharing, temporary link, secure password exchange, passcode sharing" />
+<link rel="canonical" href="https://passcodeshare.com/" />
+
+<meta property="og:title" content="Secure One-Time Link Sharing | PasscodeShare" />
+<meta property="og:description" content="Share confidential information safely with customizable, self-destructing links. Perfect for passwords and sensitive documents." />
+<meta property="og:url" content="https://passcodeshare.com/" />
+<meta property="og:image" content="https://passcodeshare.com/logo192.png" /> 
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Secure One-Time Link Sharing | PasscodeShare" />
+<meta name="twitter:description" content="Safely send passwords and sensitive files using encrypted, self-destructing links with customizable expiration and password protection." />
+<meta name="twitter:image" content="https://passcodeshare.com/logo192.png" />
+       
+         </Helmet>
       <Header />
 
       {/* Hero Section */}

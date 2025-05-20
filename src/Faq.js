@@ -1,10 +1,15 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import { Helmet } from 'react-helmet';
 
 function Faq() {
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', color: '#333' }}>
+      <Helmet>
+      <title>PasscodeShare FAQ – Secure Sharing Help</title>
+      <meta name="description" content="Find answers to common questions about securely sharing passwords and files with PasscodeShare." />
+      </Helmet>
       <Header />
       <div style={{ padding: '3rem', maxWidth: '900px', margin: '0 auto', fontFamily: 'Arial, sans-serif', color: '#333' }}>
   <h1 style={{ color: '#145fff', marginBottom: '1rem' }}>Frequently Asked Questions (FAQ)</h1>

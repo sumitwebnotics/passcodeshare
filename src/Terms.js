@@ -1,10 +1,15 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import { Helmet } from 'react-helmet';
 
 function Terms() {
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', color: '#333' }}>
+      <Helmet>
+      <title>Terms of Service | PasscodeShare – Secure Link Sharing Platform</title>
+      <meta name="description" content="Review PasscodeShare’s Terms of Service to understand the guidelines and policies for securely sharing passwords and confidential files via self-destructing links." />
+      </Helmet>
       <Header />
       
       <div style={{ padding: '3rem', maxWidth: '900px', margin: '0 auto', fontFamily: 'Arial, sans-serif', color: '#333' }}>

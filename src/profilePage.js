@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // Use useNavigate for redirection
 import Header from './Header'; // Assuming you already have a Header component
 import Footer from './Footer'; // Assuming you already have a Footer component
+import { Helmet } from 'react-helmet';
 
 const ProfilePage = () => {
   const [user, setUser] = useState(null);
@@ -60,6 +61,11 @@ const ProfilePage = () => {
 
   return (
     <>
+    <Helmet>
+    <title>Your Profile – PasscodeShare</title>
+<meta name="description" content="Manage your PasscodeShare account details, view activity, and update your profile securely." />
+
+    </Helmet>
       <Header />
       <div className="profile-container" style={styles.container}>
         <h2 style={styles.heading}>Profile</h2>

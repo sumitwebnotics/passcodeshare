@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Header from './Header';
 import Footer from './Footer';
+import { Helmet } from 'react-helmet';
 
 function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -46,6 +47,10 @@ function Contact() {
 
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', color: '#333' }}>
+      <Helmet>
+      <title>Contact Us – PasscodeShare</title>
+      <meta name="description" content="Have questions or need assistance? Reach out to the PasscodeShare team for support and inquiries.." />
+      </Helmet>
       <Header />
       <div style={{ padding: '2rem', maxWidth: '600px', margin: '35px auto', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', borderRadius: '8px' }}>
         <h2 style={{ textAlign: 'center' }}>Contact Us</h2>

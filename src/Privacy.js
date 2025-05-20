@@ -1,10 +1,15 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import { Helmet } from 'react-helmet';
 
 function Privacy() {
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', color: '#333' }}>
+      <Helmet>
+      <title>Privacy Policy | PasscodeShare – Secure Data Sharing</title>
+      <meta name="description" content="Learn how PasscodeShare collects, uses, and protects your data when sharing passwords and confidential files via self-destructing links." />
+      </Helmet>
       <Header />
       
       <div style={{ padding: '3rem', maxWidth: '900px', margin: '0 auto', fontFamily: 'Arial, sans-serif', color: '#333' }}>

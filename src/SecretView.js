@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Header from './Header';
 import Footer from './Footer';
+import { Helmet } from 'react-helmet';
 
 function SecretView() {
   const { id } = useParams();
@@ -52,6 +53,11 @@ function SecretView() {
 
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', color: '#333' }}>
+      <Helmet>
+      <title>View Secret – PasscodeShare</title>
+<meta name="description" content="Access your one-time secret securely. This link will self-destruct after viewing to ensure maximum privacy and protection." />
+
+      </Helmet>
       <Header />
       <div style={{ padding: '2rem', textAlign: 'center' }}>
         {loading ? (

@@ -1,10 +1,17 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import { Helmet } from 'react-helmet';
 
 function Donate() {
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', color: '#333' }}>
+      <Helmet>
+      <title>Donate – PasscodeShare</title>
+<meta name="description" content="Help us keep PasscodeShare secure and free. Your donation supports the development of privacy-first tools for safe information sharing." />
+
+      </Helmet>
+      
       <Header />
       <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
         <h2>Support Our Mission</h2>

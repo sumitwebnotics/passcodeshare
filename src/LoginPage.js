@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // For redirect after login
 import Header from './Header';
 import Footer from './Footer';
+import { Helmet } from 'react-helmet';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -53,6 +54,10 @@ const LoginPage = () => {
 
   return (
     <>
+    <Helmet>
+    <title>Login to Your Account – PasscodeShare</title>
+    <meta name="description" content="Securely log in to your PasscodeShare account to access your encrypted links and manage your shared secrets." />
+    </Helmet>
       <Header />
       <div className="login-page" style={styles.container}>
         <h2 style={styles.heading}>Login</h2>
