@@ -280,13 +280,20 @@ function Home() {
             </div>
             <div style={{ maxWidth: '297px' }}>
               <h4>Receive</h4>
-              <p>Request confidential information securely from others through unique, self-expiring links. Ideal for ensuring compliance with privacy standards and facilitating secure, traceable data exchange.</p>
-            </div>
-            <div style={{ maxWidth: '297px' }}>
+              <p>
+              Request confidential information securely from others through unique, self-expiring links.
+              Ideal for ensuring compliance with privacy standards and facilitating secure, traceable data exchange.
+              </p>
+              </div>
+
+              <div style={{ maxWidth: '297px' }}>
               <h4>Chat</h4>
-              <p>Conduct secure, one-time communications confidently—your messages vanish after reading. Ideal for sensitive, private conversations and secure discussions requiring complete confidentiality.
-              Trusted by leading brands including Monday.com, ThermaTru Doors, BioNTech, and FocusIT.</p>
-            </div>
+              <p>
+              Ideal for sensitive, private conversations and secure discussions requiring complete confidentiality.
+              Trusted by leading brands including Monday.com, ThermaTru Doors, BioNTech, and FocusIT.
+              </p>
+              </div>
+
           </div>
          
         </div>
